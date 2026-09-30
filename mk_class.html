@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>M.K Classes | Learn • Grow • Achieve</title>
+
+    <meta name="description"
+        content="M.K Classes - Quality education from Nursery to 12th. Experienced teachers, small batches, regular tests, concept-focused learning and practical education.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #f6f8fc;
+            color: #172033;
+            line-height: 1.6;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.96);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 3px 20px rgba(0,0,0,0.08);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: auto;
+            padding: 15px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 27px;
+            font-weight: 800;
+            color: #173b8f;
+        }
+
+        .logo span {
+            color: #f59e0b;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #172033;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #f59e0b;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            background:
+                linear-gradient(135deg, #102a68, #2456b8);
+            color: white;
+            padding: 70px 8%;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 76px);
+            line-height: 1.05;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #ffd166;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+            color: #e4ecff;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            padding: 13px 25px;
+            border-radius: 30px;
+            font-weight: 700;
+            margin-right: 10px;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #f59e0b;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            background: #d97706;
+        }
+
+        .btn-light {
+            background: white;
+            color: #173b8f;
+        }
+
+        .btn-light:hover {
+            transform: translateY(-3px);
+        }
+
+        /* ================= GENERAL ================= */
+
+        section {
+            padding: 80px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            color: #173b8f;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #64748b;
+        }
+
+        /* ================= ABOUT ================= */
+
+        .about {
+            max-width: 1100px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about-text {
+            font-size: 18px;
+            color: #475569;
+        }
+
+        .highlight {
+            color: #173b8f;
+            font-weight: 700;
+        }
+
+        /* ================= STATS ================= */
+
+        .stats {
+            background: white;
+        }
+
+        .stats-grid {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .stat {
+            padding: 30px;
+            text-align: center;
+            background: #f7f9ff;
+            border-radius: 18px;
+        }
+
+        .stat h3 {
+            font-size: 34px;
+            color: #173b8f;
+        }
+
+        .stat p {
+            color: #64748b;
+        }
+
+        /* ================= FEATURES ================= */
+
+        .features-grid {
+            max-width: 1150px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .feature {
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(23,59,143,0.08);
+            transition: 0.3s;
+        }
+
+        .feature:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 15px 35px rgba(23,59,143,0.15);
+        }
+
+        .feature .icon {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .feature h3 {
+            color: #173b8f;
+            margin-bottom: 8px;
+        }
+
+        .feature p {
+            color: #64748b;
+        }
+
+        /* ================= TOPPERS ================= */
+
+        .toppers {
+            background: #eef4ff;
+        }
+
+        .topper-grid {
+            max-width: 900px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .topper {
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .topper-badge {
+            display: inline-block;
+            background: #fff3cd;
+            color: #9a6700;
+            padding: 7px 15px;
+            border-radius: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .topper h3 {
+            font-size: 27px;
+            color: #173b8f;
+        }
+
+        .percentage {
+            font-size: 45px;
+            font-weight: 800;
+            color: #f59e0b;
+        }
+
+        /* ================= PROGRAMS ================= */
+
+        .classes {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .class-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .class-item {
+            background: white;
+            padding: 13px 22px;
+            border-radius: 30px;
+            font-weight: 700;
+            color: #173b8f;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+        }
+
+        /* ================= ACTIVITIES ================= */
+
+        .activity-grid {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .activity {
+            min-height: 160px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: white;
+            border-radius: 18px;
+            padding: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+            transition: 0.3s;
+        }
+
+        .activity:hover {
+            transform: scale(1.03);
+        }
+
+        .activity span {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .activity h3 {
+            color: #173b8f;
+        }
+
+        /* ================= FEES ================= */
+
+        .fees {
+            background: #102a68;
+            color: white;
+            text-align: center;
+        }
+
+        .fees .section-title h2 {
+            color: white;
+        }
+
+        .fees .section-title p {
+            color: #dbe6ff;
+        }
+
+        .fee-box {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            color: #172033;
+            padding: 35px;
+            border-radius: 20px;
+        }
+
+        .fee-box h3 {
+            color: #173b8f;
+            margin-bottom: 15px;
+        }
+
+        .fee-note {
+            color: #64748b;
+            margin-top: 15px;
+        }
+
+        /* ================= CONTACT ================= */
+
+        .contact-grid {
+            max-width: 1050px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+        }
+
+        .contact-card h3 {
+            color: #173b8f;
+            margin-bottom: 20px;
+        }
+
+        .contact-card p {
+            margin: 12px 0;
+        }
+
+        .contact-card a {
+            color: #173b8f;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #0b1835;
+            color: #dbe6ff;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        footer h2 {
+            color: white;
+            margin-bottom: 8px;
+        }
+
+        footer p {
+            margin: 5px;
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 850px) {
+
+            nav {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .stats-grid,
+            .features-grid,
+            .activity-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .topper-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 550px) {
+
+            section {
+                padding: 60px 5%;
+            }
+
+            .hero {
+                padding: 60px 6%;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .stats-grid,
+            .features-grid,
+            .activity-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                font-size: 14px;
+            }
+
+            .btn {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
+        <nav>
+            <div class="logo">M.K <span>Classes</span></div>
+
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Why Us</a></li>
+                <li><a href="#toppers">Toppers</a></li>
+                <li><a href="#activities">Activities</a></li>
+                <li><a href="#fees">Fees</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+                Learn Today.<br>
+                <span>Achieve Tomorrow.</span>
+            </h1>
+
+            <p>
+                Welcome to M.K Classes — a student-focused learning
+                institute providing quality education from Nursery to 12th.
+                We focus on concepts, regular practice and overall
+                development.
+            </p>
+
+            <a href="#contact" class="btn btn-primary">
+                Contact Us
+            </a>
+
+            <a href="#features" class="btn btn-light">
+                Explore Classes
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about">
+
+        <div class="section-title">
+            <h2>About M.K Classes</h2>
+            <p>Education with concepts, discipline and personal attention.</p>
+        </div>
+
+        <div class="about">
+
+            <p class="about-text">
+                M.K Classes was established in <strong>2021</strong> under
+                the guidance of <strong>Mr. Manish Prajapati</strong>.
+                Our aim is to create a learning environment where every
+                student receives proper guidance and understands concepts
+                instead of simply memorising them.
+            </p>
+
+            <br>
+
+            <p class="about-text">
+                We provide education from
+                <span class="highlight">Nursery to 12th</span>,
+                along with drawing competitions, social activities,
+                educational picnics, practical explanations and
+                celebrations that encourage students to learn beyond
+                textbooks.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= STATS ================= -->
+
+    <section class="stats">
+
+        <div class="stats-grid">
+
+            <div class="stat">
+                <h3>2021</h3>
+                <p>Established</p>
+            </div>
+
+            <div class="stat">
+                <h3>Nur–12</h3>
+                <p>Classes Available</p>
+            </div>
+
+            <div class="stat">
+                <h3>Small</h3>
+                <p>Batch Size</p>
+            </div>
+
+            <div class="stat">
+                <h3>100%</h3>
+                <p>Concept Focus</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= WHY US ================= -->
+
+    <section id="features">
+
+        <div class="section-title">
+
+            <h2>Why Choose M.K Classes?</h2>
+
+            <p>
+                A balanced approach to academic and personal development.
+            </p>
+
+        </div>
+
+        <div class="features-grid">
+
+            <div class="feature">
+                <div class="icon">👨‍🏫</div>
+                <h3>Experienced Teachers</h3>
+                <p>
+                    Experienced educators provide clear explanations
+                    and proper academic guidance.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div class="icon">👥</div>
+                <h3>Small Batches</h3>
+                <p>
+                    Limited students in each batch allow better
+                    attention and interaction.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div class="icon">🎯</div>
+                <h3>Individual Attention</h3>
+                <p>
+                    Teachers focus on each student's learning needs
+                    and progress.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div class="icon">📚</div>
+                <h3>Well-Planned Study Material</h3>
+                <p>
+                    Structured study material helps students learn
+                    topics systematically.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div class="icon">📝</div>
+                <h3>Regular Tests</h3>
+                <p>
+                    Regular tests help students practise and understand
+                    their academic progress.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div class="icon">💡</div>
+                <h3>Concept-Based Learning</h3>
+                <p>
+                    Focus on understanding concepts instead of
+                    depending only on memorisation.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div class="icon">🧪</div>
+                <h3>Practical Explanation</h3>
+                <p>
+                    Topics are connected with practical examples
+                    wherever possible.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div class="icon">🏫</div>
+                <h3>Safe & Secure Environment</h3>
+                <p>
+                    A comfortable and disciplined environment for
+                    students to learn confidently.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div class="icon">👪</div>
+                <h3>Monthly Parents Meeting</h3>
+                <p>
+                    Regular parent meetings help keep families
+                    informed about student progress.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= TOPPERS ================= -->
+
+    <section id="toppers" class="toppers">
+
+        <div class="section-title">
+
+            <h2>Our Achievers</h2>
+
+            <p>
+                Celebrating the academic achievements of our students.
+            </p>
+
+        </div>
+
+        <div class="topper-grid">
+
+            <div class="topper">
+
+                <div class="topper-badge">
+                    🏆 Topper
+                </div>
+
+                <h3>Alok</h3>
+
+                <div class="percentage">
+                    91%
+                </div>
+
+                <p>
+                    Commerce
+                </p>
+
+            </div>
+
+
+            <div class="topper">
+
+                <div class="topper-badge">
+                    🏆 Topper
+                </div>
+
+                <h3>Anuj</h3>
+
+                <div class="percentage">
+                    82%
+                </div>
+
+                <p>
+                    10th Standard
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CLASSES ================= -->
+
+    <section>
+
+        <div class="section-title">
+
+            <h2>Classes We Offer</h2>
+
+            <p>
+                Academic support for students from early education
+                through higher secondary.
+            </p>
+
+        </div>
+
+        <div class="classes">
+
+            <div class="class-list">
+
+                <div class="class-item">Nursery</div>
+                <div class="class-item">Jr. KG</div>
+                <div class="class-item">Sr. KG</div>
+
+                <div class="class-item">1st</div>
+                <div class="class-item">2nd</div>
+                <div class="class-item">3rd</div>
+                <div class="class-item">4th</div>
+                <div class="class-item">5th</div>
+                <div class="class-item">6th</div>
+                <div class="class-item">7th</div>
+                <div class="class-item">8th</div>
+                <div class="class-item">9th</div>
+                <div class="class-item">10th</div>
+                <div class="class-item">11th</div>
+                <div class="class-item">12th</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ACTIVITIES ================= -->
+
+    <section id="activities">
+
+        <div class="section-title">
+
+            <h2>Activities & Celebrations</h2>
+
+            <p>
+                Learning doesn't stop inside the classroom.
+            </p>
+
+        </div>
+
+        <div class="activity-grid">
+
+            <div class="activity">
+                <span>🪔</span>
+                <h3>Diwali</h3>
+            </div>
+
+            <div class="activity">
+                <span>🎨</span>
+                <h3>Holi</h3>
+            </div>
+
+            <div class="activity">
+                <span>🦚</span>
+                <h3>Janmashtami</h3>
+            </div>
+
+            <div class="activity">
+                <span>💃</span>
+                <h3>Garba</h3>
+            </div>
+
+            <div class="activity">
+                <span>🎀</span>
+                <h3>Raksha Bandhan</h3>
+            </div>
+
+            <div class="activity">
+                <span>🎨</span>
+                <h3>Drawing Competition</h3>
+            </div>
+
+            <div class="activity">
+                <span>🚌</span>
+                <h3>Educational Picnic</h3>
+            </div>
+
+            <div class="activity">
+                <span>🤝</span>
+                <h3>Social Activities</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ADDITIONAL ACTIVITIES ================= -->
+
+    <section>
+
+        <div class="section-title">
+
+            <h2>Beyond Academics</h2>
+
+            <p>
+                Helping students develop confidence, creativity and
+                social awareness.
+            </p>
+
+        </div>
+
+        <div class="features-grid">
+
+            <div class="feature">
+                <div class="icon">🎤</div>
+                <h3>Public Speaking</h3>
+                <p>
+                    Activities that encourage students to express
+                    their ideas confidently.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div class="icon">🧠</div>
+                <h3>Quiz & Brain Activities</h3>
+                <p>
+                    Interactive activities to encourage logical thinking
+                    and general awareness.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div class="icon">🏅</div>
+                <h3>Competitions</h3>
+                <p>
+                    Academic and creative competitions encourage
+                    healthy participation.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div class="icon">🌱</div>
+                <h3>Social Awareness</h3>
+                <p>
+                    Students participate in activities that promote
+                    responsibility and community awareness.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div class="icon">🔬</div>
+                <h3>Practical Learning</h3>
+                <p>
+                    Real-world examples make classroom concepts
+                    easier to understand.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div class="icon">🎯</div>
+                <h3>Student Development</h3>
+                <p>
+                    Focus on academics along with confidence,
+                    creativity and discipline.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FEES ================= -->
+
+    <section id="fees" class="fees">
+
+        <div class="section-title">
+
+            <h2>Student Fees</h2>
+
+            <p>
+                Affordable and structured education for students.
+            </p>
+
+        </div>
+
+        <div class="fee-box">
+
+            <h3>Fee Details</h3>
+
+            <p>
+                Contact M.K Classes directly for the latest fee
+                structure according to the student's class.
+            </p>
+
+            <p class="fee-note">
+                Fees may vary according to the class and academic
+                requirements.
+            </p>
+
+            <br>
+
+            <a href="tel:9175374369" class="btn btn-primary">
+                Call for Fees
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact">
+
+        <div class="section-title">
+
+            <h2>Contact M.K Classes</h2>
+
+            <p>
+                Get in touch with us for admission and fee information.
+            </p>
+
+        </div>
+
+        <div class="contact-grid">
+
+            <div class="contact-card">
+
+                <h3>📍 Our Location</h3>
+
+                <p>
+                    <strong>Address:</strong><br>
+                    Valai Pada Road,<br>
+                    Nallasopara East,<br>
+                    Maharashtra, India
+                </p>
+
+                <p>
+                    <strong>Owner:</strong>
+                    Mr. Manish Prajapati
+                </p>
+
+                <p>
+                    <strong>Established:</strong>
+                    2021
+                </p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <h3>📞 Contact Details</h3>
+
+                <p>
+                    <strong>Phone:</strong><br>
+                    <a href="tel:9175374369">
+                        9175374369
+                    </a>
+                </p>
+
+                <p>
+                    <strong>Email:</strong><br>
+                    <a href="mailto:karanmandal1303@gmail.com">
+                        karanmandal1303@gmail.com
+                    </a>
+                </p>
+
+                <br>
+
+                <a href="tel:9175374369" class="btn btn-primary">
+                    Call Now
+                </a>
+
+                <a href="mailto:karanmandal1303@gmail.com"
+                   class="btn btn-light">
+                    Email Us
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h2>M.K Classes</h2>
+
+        <p>
+            Learn • Grow • Achieve
+        </p>
+
+        <p>
+            Quality Education from Nursery to 12th
+        </p>
+
+        <br>
+
+        <p>
+            © 2026 M.K Classes. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        // Simple welcome message in browser console
+        console.log("Welcome to M.K Classes!");
+
+        // Highlight active navigation link while scrolling
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll("nav ul li a");
+
+        window.addEventListener("scroll", () => {
+
+            let current = "";
+
+            sections.forEach(section => {
+
+                const sectionTop = section.offsetTop - 150;
+
+                if (scrollY >= sectionTop) {
+                    current = section.getAttribute("id");
+                }
+
+            });
+
+            navLinks.forEach(link => {
+
+                link.style.color = "";
+
+                if (link.getAttribute("href") === "#" + current) {
+                    link.style.color = "#f59e0b";
+                }
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
